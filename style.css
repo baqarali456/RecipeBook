@@ -40,6 +40,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 20px;
+    position: relative;
   }
 
 
@@ -97,6 +98,27 @@ body {
   }
   #recipeForm{
     margin-bottom: 5px;
+  }
+
+  .Edit{
+    float: right;
+    font-size: 41px;
+    cursor: pointer;
+  }
+  .editContainer{
+    margin-top: 10px;
+    
+    display: none;
+  }
+  .editContainer.active{
+    position: absolute;
+    display: block;
+    right: 8%;
+  }
+
+  .editContainer input{
+    width: 150px;
+    padding: 10px 0;
   }
 
   

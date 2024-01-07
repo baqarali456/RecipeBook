@@ -10,6 +10,7 @@ const showRecipes = async(category) =>{
     const {recipes} = data;
      
     
+    
     str = "";
     recipes.forEach(recipe => {
       const {title,image_url,recipe_id,publisher} = recipe;
@@ -22,6 +23,7 @@ const showRecipes = async(category) =>{
         <h2 class="recipe-title">${title}</h2>
         <p class="recipe-description">${publisher}</p>
       </div>
+       
     </li>`
     recipeList.innerHTML = str;
     });
@@ -30,11 +32,6 @@ const showRecipes = async(category) =>{
    
 }
 window.addEventListener('DOMContentLoaded',showRecipes("ice cream"));
-
-
-
-
-
 
 
 const search = document.getElementById('search');
@@ -81,8 +78,9 @@ categoriesDrop.addEventListener('change',(e)=>{
 
 const displayAddRecipeForm = document.getElementById('addRecipe');
 
+const addrecipeform = document.querySelector('.add-recipe-form');
+
 displayAddRecipeForm.addEventListener('click',()=>{
- const addrecipeform =document.querySelector('.add-recipe-form');
  addrecipeform.classList.toggle('active');
 })
 
@@ -100,7 +98,28 @@ function addRecipe(){
   </div>
 </li>`
 recipeList.innerHTML = str;
+recipeImage.value = "";
+recipeTitle.value = "";
+recipeId.value = "";
+addrecipeform.classList.remove('active');
+ 
 }
+
+
+
+
+function onEdit(i){
+  console.log(i);
+  const editContainer = document.querySelector('.editContainer');
+   editContainer.classList.toggle('active');
+   
+  //  let finddataIndex = 
+}
+
+
+
+
+
 
 
 
