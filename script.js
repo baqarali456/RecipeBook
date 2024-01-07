@@ -108,13 +108,7 @@ addrecipeform.classList.remove('active');
 
 
 
-function onEdit(i){
-  console.log(i);
-  const editContainer = document.querySelector('.editContainer');
-   editContainer.classList.toggle('active');
-   
-  //  let finddataIndex = 
-}
+
 
 
 
