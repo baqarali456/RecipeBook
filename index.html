@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#recipes">Recipes</a>
+      
+      <div class="category-dropdown">
+        <select id="categories" name="categories">
+          
+          <!-- Add more categories as needed -->
+        </select>
+      </div>
+   
+      <a   id="addRecipe" href="#add-recipe">Add Recipe</a>
+      <a href="#about">About</a>
+      
+      <div class="search-container">
+        <input id="input" type="text" class="search-input" placeholder="Search...">
+        <button id="search" class="search-button">Search</button>
+      </div>
+
+      </nav>
+
+
+      <div class="add-recipe-form">
+        <h2>Add Recipe</h2>
+        <form id="recipeForm">
+          <label for="recipeTitle">Title:</label>
+          <input type="text" id="recipeTitle" name="recipeTitle" required>
+    
+          <label for="recipeImage">Image URL:</label>
+          <input type="text" id="recipeImage" name="recipeImage" required>
+    
+          <label for="recipeId">ID:</label>
+          <input type="text" id="recipeId" name="recipeId" required>
+    
+          <button type="button" onclick="addRecipe()">Add Recipe</button>
+        </form>
+      </div>
+
+      
+  <ul class="recipe-list">
+    
+  </ul>
+    <script src="script.js"></script>
+</body>
+</html>
